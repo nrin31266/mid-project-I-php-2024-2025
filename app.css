@@ -1,0 +1,53 @@
+/* Hộp thoại thông báo */
+.message-dialog {
+    position: fixed;
+    top: 20px; /* Đặt ở trên cùng của trang */
+    right: 50px; /* Căn sang phải */
+    color: #721c24; /* Màu chữ cho thông báo */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Hiệu ứng đổ bóng */
+    z-index: 10000; /* Đảm bảo hộp thoại luôn ở trên */
+    display: none; /* Ẩn mặc định */
+}
+
+/* Nội dung thông báo */
+.message-dialog p {
+    margin: 0;
+}
+
+/* Hình ảnh cho thông báo */
+.message-dialog img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* Hiệu ứng xuất hiện */
+.show-message-dialog {
+    display: block; /* Hiển thị hộp thoại khi có lỗi */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Hiệu ứng mờ dần */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Các kiểu khác nhau cho thông báo lỗi và thành công */
+.error-dialog {
+    background-color: #f8d7da; /* Nền màu lỗi (đỏ nhạt) */
+}
+
+.success-dialog {
+    background-color: #d4edda; /* Nền màu thành công (xanh nhạt) */
+    color: #155724; /* Màu chữ cho thông báo thành công */
+}
